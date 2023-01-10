@@ -1,0 +1,13 @@
+diff --git a/node_modules/@vitejs/plugin-react/dist/index.cjs b/node_modules/@vitejs/plugin-react/dist/index.cjs
+index 35bcfa2..1ad366e 100644
+--- a/node_modules/@vitejs/plugin-react/dist/index.cjs
++++ b/node_modules/@vitejs/plugin-react/dist/index.cjs
+@@ -135,7 +135,7 @@ function viteReact(opts = {}) {
+   let runPluginOverrides = (options, context) => false;
+   let staticBabelOptions;
+   const useAutomaticRuntime = opts.jsxRuntime !== "classic";
+-  const importReactRE = /(?:^|\n)import\s+(?:\*\s+as\s+)?React(?:,|\s+)/;
++  const importReactRE = /(?:^|\n)import\s+(?:\*\s+as\s+)?(React|JsxRuntime)(?:,|\s+)/;
+   const fileExtensionRE = /\.[^/\s?]+$/;
+   const viteBabel = {
+     name: "vite:react-babel",
